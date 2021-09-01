@@ -11,6 +11,9 @@ public class Main {
 
     public static void main(String[] args) {
 
+        log.info("guess the number");
+        log.debug("guess the number debug info");
+
         // create context (context)
         ConfigurableApplicationContext context=new ClassPathXmlApplicationContext(CONFIG_LOCATION);
 
