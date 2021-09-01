@@ -3,6 +3,9 @@ package org.spring.tutorial;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class GameImpl implements Game {
 
     private static final Logger log = LoggerFactory.getLogger(GameImpl.class);
@@ -18,6 +21,7 @@ public class GameImpl implements Game {
     private int remainingGuess;
     private boolean validNumberRange = true;
 
+    @PostConstruct
     @Override
     public void reset() {
 
@@ -60,7 +64,7 @@ public class GameImpl implements Game {
     }
 
     @Override
-    public int getRemainningGuess() {
+    public int getRemainingGuess() {
         return remainingGuess;
     }
 
@@ -96,6 +100,11 @@ public class GameImpl implements Game {
     @Override
     public boolean isGameLost() {
         return !isGameWon() && remainingGuess <= 0;
+    }
+
+    @PreDestroy
+    public void preDestroy(){
+        log.info("in game pre destroy method");
     }
 
     private void checkValidNumberRange() {

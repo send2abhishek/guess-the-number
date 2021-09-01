@@ -7,7 +7,7 @@ public interface Game {
     void setGuess(int guess);
     int getSmallest();
     int getBiggest();
-    int getRemainningGuess();
+    int getRemainingGuess();
     void reset();
     void check();
     boolean isValidNumberRange();
