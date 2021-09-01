@@ -17,9 +17,13 @@ public class Main {
         // create context (context)
         ConfigurableApplicationContext context=new ClassPathXmlApplicationContext(CONFIG_LOCATION);
 
-        NumberGeneratorImpl numberGenerator=context.getBean("nuberGenerator",NumberGeneratorImpl.class);
+        // this is the one of the way to create the object using spring container
+        NumberGenerator numberGenerator=context.getBean("numberGenerator",NumberGenerator.class);
 
         log.info("number is ={}",numberGenerator.next());
+        // this the other way of getting the bean from spring container
+        Game game=context.getBean(Game.class);
+        game.reset();
 
         //close context
         context.close();

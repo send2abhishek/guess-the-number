@@ -14,7 +14,7 @@ public class NumberGeneratorImpl implements NumberGenerator{
     }
 
     @Override
-    public int getNextNumber() {
+    public int getMaxNumber() {
         return maxNumber;
     }
 }
