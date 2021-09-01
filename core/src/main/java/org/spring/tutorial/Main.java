@@ -23,7 +23,7 @@ public class Main {
         log.info("number is ={}",numberGenerator.next());
         // this the other way of getting the bean from spring container
         Game game=context.getBean(Game.class);
-        game.reset();
+        //game.reset();
 
         //close context
         context.close();
