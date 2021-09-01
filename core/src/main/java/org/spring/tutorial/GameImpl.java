@@ -29,8 +29,8 @@ public class GameImpl implements Game {
         log.debug("the number is {}", number);
     }
 
-    // constructor dependencies example
-    public GameImpl(NumberGenerator numberGenerator) {
+    // setter based dependencies example
+    public void setNumberGenerator(NumberGenerator numberGenerator) {
         this.numberGenerator = numberGenerator;
     }
 
