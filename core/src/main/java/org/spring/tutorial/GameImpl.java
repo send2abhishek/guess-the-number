@@ -2,6 +2,7 @@ package org.spring.tutorial;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -12,6 +13,7 @@ public class GameImpl implements Game {
 
     // fields
 
+    @Autowired
     private NumberGenerator numberGenerator;
     private int guessCount = 10;
     private int number;
@@ -33,10 +35,12 @@ public class GameImpl implements Game {
         log.debug("the number is {}", number);
     }
 
+    // commenting this code for implement annotation based approach
+
     // setter based dependencies example
-    public void setNumberGenerator(NumberGenerator numberGenerator) {
-        this.numberGenerator = numberGenerator;
-    }
+//    public void setNumberGenerator(NumberGenerator numberGenerator) {
+//        this.numberGenerator = numberGenerator;
+//    }
 
     @Override
     public int getNumber() {
