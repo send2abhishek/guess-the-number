@@ -25,6 +25,9 @@ public class Main {
         Game game=context.getBean(Game.class);
         //game.reset();
 
+        MessageGenerator messageGenerator=context.getBean(MessageGeneratorImpl.class);
+        messageGenerator.getMainMessage();
+        messageGenerator.getResultMessage();
         //close context
         context.close();
 
