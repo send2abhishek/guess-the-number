@@ -2,7 +2,7 @@ package org.spring.tutorial;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
 
@@ -15,7 +15,7 @@ public class Main {
         log.debug("guess the number debug info");
 
         // create context (context)
-        ConfigurableApplicationContext context=new ClassPathXmlApplicationContext(CONFIG_LOCATION);
+        ConfigurableApplicationContext context=new AnnotationConfigApplicationContext(AppConfiguration.class);
 
         // this is the one of the way to create the object using spring container
         NumberGenerator numberGenerator=context.getBean(NumberGenerator.class);
