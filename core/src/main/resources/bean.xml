@@ -7,13 +7,17 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+<!--        this we are commenting because we are introducing component scan in the app.-->
+<!--    <context:annotation-config />-->
 
-    <context:annotation-config />
+    <!--    this enables the component scan-->
+    <context:component-scan base-package="org.spring.tutorial" />
 
-    <bean id="numberGenerator" class="org.spring.tutorial.NumberGeneratorImpl"/>
-    <bean id="game" class="org.spring.tutorial.GameImpl">
+<!--    now we have the component scan enable in the package so we can disable bean code below-->
+<!--    <bean id="numberGenerator" class="org.spring.tutorial.NumberGeneratorImpl"/>-->
+<!--    <bean id="game" class="org.spring.tutorial.GameImpl">-->
 <!--        <property name="numberGenerator" ref="numberGenerator"/>-->
-    </bean>
+<!--    </bean>-->
 
 <!--    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />-->
 
