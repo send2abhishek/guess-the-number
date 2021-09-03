@@ -8,7 +8,7 @@ import javax.annotation.PostConstruct;
 
 public class MessageGeneratorImpl implements MessageGenerator {
 
-    private static final Logger log = LoggerFactory.getLogger(Main.class);
+    private static final Logger log = LoggerFactory.getLogger(MessageGeneratorImpl.class);
 
     @Autowired
     private Game game;
