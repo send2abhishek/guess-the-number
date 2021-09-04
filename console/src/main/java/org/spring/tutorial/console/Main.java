@@ -2,7 +2,7 @@ package org.spring.tutorial.console;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.spring.tutorial.config.AppConfiguration;
+import org.spring.tutorial.config.GameConfig;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -13,7 +13,7 @@ public class Main {
 
     public static void main(String[] args) {
         // create context (context)
-        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppConfiguration.class);
+        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(GameConfig.class);
 
         //close context
         context.close();
