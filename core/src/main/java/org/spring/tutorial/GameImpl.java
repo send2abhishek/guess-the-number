@@ -16,7 +16,12 @@ public class GameImpl implements Game {
 
     @Autowired
     private NumberGenerator numberGenerator;
-    private int guessCount = 10;
+
+
+    @Autowired
+    @GuessCount
+    private int guessCount;
+
     private int number;
     private int guess;
     private int smallest;
@@ -73,6 +78,11 @@ public class GameImpl implements Game {
         return remainingGuess;
     }
 
+    @Override
+    public int getGuessCount() {
+        return guessCount;
+    }
+
 
     @Override
     public void check() {
@@ -108,7 +118,7 @@ public class GameImpl implements Game {
     }
 
     @PreDestroy
-    public void preDestroy(){
+    public void preDestroy() {
         log.info("in game pre destroy method");
     }
 

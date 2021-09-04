@@ -3,6 +3,7 @@ package org.spring.tutorial.console;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.spring.tutorial.*;
+import org.spring.tutorial.config.AppConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
