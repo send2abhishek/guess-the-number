@@ -11,10 +11,7 @@ import org.springframework.context.annotation.Import;
 @ComponentScan(basePackages = "org.spring.tutorial")
 public class AppConfiguration {
 
-    @Bean
-    public NumberGenerator getNumberGenerator() {
-        return new NumberGeneratorImpl();
-    }
+
 
     @Bean
     public Game getGame() {
