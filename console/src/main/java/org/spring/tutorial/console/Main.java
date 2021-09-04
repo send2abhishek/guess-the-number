@@ -1,17 +1,18 @@
 package org.spring.tutorial.console;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.spring.tutorial.config.GameConfig;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+@Slf4j
 public class Main {
 
-    private static final Logger log = LoggerFactory.getLogger(Main.class);
-    private static final String CONFIG_LOCATION = "bean.xml";
+//    private static final Logger log = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) {
+
+        log.info("guess the number game");
         // create context (context)
         ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(GameConfig.class);
 
